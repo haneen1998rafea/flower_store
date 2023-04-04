@@ -7,8 +7,8 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
-      // backgroundColor: Colors.amber,
-    );
+
+        // backgroundColor: Colors.amber,
+        );
   }
 }

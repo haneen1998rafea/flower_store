@@ -1,5 +1,6 @@
 import 'package:flowerstore/constant.dart';
 import 'package:flowerstore/views/First_screen.dart';
+import 'package:flowerstore/views/hide-screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class FlowerStore extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstScreen(),
+      home: HideGreena(),
     );
   }
 }

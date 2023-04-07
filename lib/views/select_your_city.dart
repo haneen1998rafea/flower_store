@@ -1,4 +1,3 @@
-import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flowerstore/constant.dart';
 import 'package:flowerstore/views/input_enter.dart';
 import 'package:flowerstore/widgets/container_button.dart';
@@ -35,15 +34,12 @@ class SelectCity extends StatelessWidget {
         SizedBox(height: size.height * 0.05),
         TextFiledDrop(),
         SizedBox(height: size.height * 0.05),
-        Padding(
-          padding: const EdgeInsets.all(16),
-          child: ContainerButton(
-            title: "التالي",
-            onTap: () {
-              Navigator.pushNamed(context, EnterInput.id);
-            },
-          ),
-        )
+        ContainerButton(
+          title: "التالي",
+          onTap: () {
+            Navigator.pushNamed(context, EnterInput.id);
+          },
+        ),
       ]),
     );
   }

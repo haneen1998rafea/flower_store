@@ -9,22 +9,25 @@ class ContainerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: kPrimaryColor,
-        ),
-        height: size.height * 0.1,
-        width: size.width,
-        child: Center(
-          child: Text(
-            title,
-            style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: backgroundColor),
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: kPrimaryColor,
+          ),
+          height: size.height * 0.1,
+          width: size.width,
+          child: Center(
+            child: Text(
+              title,
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: backgroundColor),
+            ),
           ),
         ),
       ),

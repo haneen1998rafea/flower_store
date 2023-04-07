@@ -9,7 +9,13 @@ class TextFiledDrop extends StatefulWidget {
 
 class _TextFiledDropState extends State<TextFiledDrop> {
   String? dropdownValue;
-  List<String> cityInfo = ["ggg"];
+  List<String> cityInfo = [
+    "السيدة زينب",
+    "مهاجرين",
+    "مزة",
+    "شيخ سعد",
+    "برامكة"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,17 +23,18 @@ class _TextFiledDropState extends State<TextFiledDrop> {
     return Container(
       width: size.height * 0.4,
       child: DropdownButton(
-        hint: Text('مدينتك'),
+        hint: Text(
+          'مدينتك',
+          textAlign: TextAlign.start,
+        ),
         isExpanded: true,
         value: dropdownValue,
         onChanged: (String? newValue) {
           setState(() {
             dropdownValue = newValue!;
-            debugPrint(cityInfo.indexOf(newValue).toString());
           });
         },
-        items: <String>['مزة', 'برامكة', 'شيخ سعد']
-            .map<DropdownMenuItem<String>>((String value) {
+        items: cityInfo.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Container(
